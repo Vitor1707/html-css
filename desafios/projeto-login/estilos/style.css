@@ -134,6 +134,7 @@ form > a.botao {
     color: #2d6462;
     padding-top: 7px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 form > a.botao:hover {
