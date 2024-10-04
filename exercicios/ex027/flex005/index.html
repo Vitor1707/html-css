@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Centralizado</title>
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: #314331;
+        }
+
+        main {
+            background-image: url(imagens/pexels-karolina-grabowska-4593901.jpg) ;
+            background-size: cover;
+            background-position: left top;
+            background-attachment: fixed;
+            height: 100vh;
+            width: 100vw;
+            border-radius: 16px;
+            
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background-color: #3c983c60;
+            color: black;
+            border: 2px solid #3c983c;
+            border-radius: 8px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.473);
+            height: 380px;
+            width: 300px;
+            padding: 10px;
+        }
+
+        section > div {
+            text-shadow: 2px 2px 5px #27352769;
+        }
+
+        section > div#formulario > h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        section > div#formulario > p {
+            font-size: 0.8em;
+            margin: 10px 0px 10px 0px;
+        }
+
+        form {
+            padding-top: 10px;
+        }
+
+        form > div.campo {
+
+        }
+
+        form > div.campo > input {
+            display: block;
+            background-color: #c5fdc5;
+            margin: 10px 0px;
+            width: 100%;
+            height: 50px;
+            border-radius: 8px;
+            border: 2px solid #3c983c;
+        }
+
+        form > div.entrar {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form > div.entrar > input {
+            text-align: center;
+            font-size: 1.2em;
+            display: block;
+            background-color: #3c983c;
+            width: 250px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid #314331;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+
+        form > div.entrar > input:hover {
+            background-color: #90ee90;
+            border: 1px solid #314331;
+        }
+
+        form > div.esqcsenha {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form > div.esqcsenha > a {
+            background-color: #c5fdc5;
+            color: #314331;
+            text-decoration: none;
+            padding: 10px;
+            width: 250px;
+            height: 50px;
+            border: 2px solid #45ad45;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        form > div.esqcsenha > a:hover {
+            background-color: #314331;
+            color: #c5fdc5;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div id="formulario">
+                <h1>Tela de Login</h1>
+                <p>Faça seu login aqui</p>
+
+                <form action="formulario.php" method="post" autocomplete="on">
+
+                    <div class="campo">
+                        <input type="email" name="email" id="iemail" required autocomplete="email" placeholder="seu e-mail" maxlength="40">
+                        <label for="iemail"></label>
+                        </div>
+
+                    <div class="campo">
+                        <input type="password" name="senha" id="isenha" required autocomplete="current-password" placeholder="sua senha" minlength="8" maxlength="20">
+                        <label for="isenha"></label>
+                    </div>
+
+                    <div class="entrar">
+                        <input type="submit" value="Entrar">
+                        
+                    </div>
+                        <div class="esqcsenha">
+                            <a href="#" class="botao">Esqueci minha senha</a>
+                        </div>
+                </form>
+        </section>
+    </main>
+</body>
+</html>
